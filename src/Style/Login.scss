@@ -1,0 +1,24 @@
+#forimage {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+#swing {
+  animation: swing 2s infinite linear;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
