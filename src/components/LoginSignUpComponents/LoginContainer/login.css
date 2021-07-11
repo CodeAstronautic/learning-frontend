@@ -1,0 +1,82 @@
+.container {
+  height: "60vh";
+  width: "100%";
+  display: "flex";
+  flex-direction: "row";
+  margin-top: "16px";
+  justify-content: "center";
+}
+
+.MuiFormControl-root {
+  width: 90% !important;
+  margin: 12px !important;
+}
+.items {
+  width: 95% !important;
+}
+.form {
+  width: 70%;
+  margin: auto;
+}
+.MuiFormGroup-row {
+  margin-left: "10px" !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 0 !important;
+  color: aliceblue;
+}
+.MuiFormLabel-root {
+  color: white !important;
+}
+
+.welcome h1 {
+  font-weight: 300;
+  text-align: center;
+  color: white;
+}
+.welcome h3 {
+  font-weight: 150;
+  text-align: center;
+  color: white;
+}
+.FormControlLabel {
+  color: wheat;
+}
+.icon {
+  color: white !important;
+}
+.forgotPassword {
+  margin-right: 15px !important;
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  color: aliceblue;
+}
+.dont {
+  margin-right: 15px !important;
+  margin: 1px;
+  display: flex;
+  justify-content: flex-end;
+  color: aliceblue;
+}
+p {
+  margin: 0 !important;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn {
+  margin: 10px !important;
+}
+.btn-google {
+  background-color: rgb(66, 133, 244) !important;
+}
+.btn-facebook {
+  background-color: rgb(59, 102, 187) !important;
+}
+.input {
+  color: white !important;
+}

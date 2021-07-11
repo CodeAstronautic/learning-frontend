@@ -1,8 +1,38 @@
 .container {
   display: flex;
-  height: 90vh;
+  height: 100vh;
 }
 .container .image {
   height: 100%;
   width: 100%;
+}
+.signin-container {
+  background-color: rgb(72, 83, 184);
+}
+.btnContainer {
+  display: "flex" !important;
+  width: "100%" !important;
+  justify-content: "flex-end" !important;
+  align-content: "center";
+}
+.btnSign {
+  text-align: "center";
+  border-radius: "10px";
+  color: "white";
+  border: "1px solid white" !important;
+  font-size: "11px";
+  margin: "6px";
+}
+.MuiButton-outlinedSecondary {
+  color: white !important;
+  border: 1px solid white !important;
+  margin: 5px !important;
+}
+
+.Mui-disabled {
+  color: #80adad !important;
+  border: 0 !important;
+}
+.MuiGrid-container {
+  justify-content: flex-end !important;
 }
