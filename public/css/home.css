@@ -1,0 +1,325 @@
+body{
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	color: #2D3436;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #2D3436;
+}
+header{
+	display: grid;
+	grid-template-columns: 70px 120px auto 150px;
+	padding:  0 135px;
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+header #layout{
+	grid-column-start: 1;
+	align-self: center;
+	height: 64px;
+}
+header #menu{
+	display: none;
+}
+header h1{
+	display: inline-block;
+	grid-column-start: 2;
+	width: 90%;
+	padding: 5%;
+	align-self: center;
+	margin: 0 auto;
+}
+header nav{
+	grid-column-start: 3;
+	align-self: center;
+}
+header nav ul{
+	padding: 0;
+	margin: 0;
+}
+header nav li{
+	display: inline-block;
+
+	width: fit-content;
+	padding: 24px 0;
+	margin: 0 0.8vw;
+}
+header nav li + li:before{
+	content: '\2022';
+	color: #FDCB6E;
+	position: relative;
+	left: -0.8vw;
+}
+header nav a{
+	color: #6C5CE7;
+}
+header nav a.active{
+	color: #2D3436;
+	font-weight: 700;
+}
+@media only screen and (max-width: 1111px){
+	/*changing the nav bar for better fit*/
+	header #layout, header nav{
+		display: none;
+	}
+	header #menu{
+		display: block;
+		grid-column-start: 1;
+		align-self: center;
+		height: 64px;
+	}
+	header button{
+		margin: 16px auto;
+	}
+}
+header button{
+	grid-column-start: 4;
+	align-self: center;
+	justify-self: right;
+	border-radius: 22.5px;
+	height: 45px;
+	width: 150px;
+	background-color: #2D3436;
+	font-size: 125%;
+	color: #FFFFFF;
+}
+main{
+	height: 1220px;
+	padding: 5px 135px;
+	position: relative;
+	background-image: url("../images/main-background.jpg");
+	/*if background image not available, no background should be used*/
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: initial;
+}
+main > p:first-of-type{
+	font-size: calc(45px + 3vw);
+	font-weight: 800;
+	max-width: 1000px;
+	margin: 60px auto 0;
+	text-align: center;
+}
+main > p:first-of-type span{
+	display: inline-block;
+	color: #9402CF;
+}
+main #down-arrow{
+	display: none;
+}
+main > button{
+	height: 82px;
+	width: 270px;
+	border-radius: 41px;
+	border-width: 0;
+	background-color: #FFFFFF;
+	font-size: 125%;
+	font-weight: 700;
+	color: #6C5CE7;
+
+	position: absolute;
+	left: 135px;
+	bottom: 152px;
+
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+footer{
+	margin: 10px 0 0;
+	padding: 0 135px 40px;
+	background-image: url("../images/Wave.svg");
+	/*if background image not available, no background should be used*/
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+}
+footer section h3{
+	color: rgba(173, 173, 173, 0.32);
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+@media only screen and (min-width: 925px){
+	footer{
+		display: grid;
+		grid-template-columns: 60% 40%;
+		grid-template-rows: 120px 300px;
+	}
+	footer #socials{
+		grid-column-start: 1;
+		grid-row-start: 1;
+	}
+	footer #info{
+		grid-column-start: 1;
+		grid-row-start: 2;
+	}
+	footer #email{
+		grid-column-start: 2;
+		grid-row-start: 1;
+	}
+	footer #message-form{
+		grid-column-start: 2;
+		grid-row-start: 2;
+	}
+}
+footer #socials ul{
+	padding: 0;
+	margin: 0 auto;
+}
+footer #socials li{
+	display: inline-block;
+	width: 8%;
+	max-width: 50px;
+	padding: 1%;
+	margin: 5px 3%;
+	border-radius: 100%;
+	background-color: #FFEAA7;
+	text-align: center;
+}
+footer #socials img{
+	width: 100%;
+}
+footer #info a:hover, footer #info a:active{
+	text-decoration: underline;
+}
+footer #info ul{
+	display: inline-block;
+	list-style: none;
+	font-size: 14px;
+	float: left;
+	width: 25%;
+	padding: 0;
+	margin-right: 30px;
+}
+footer #info li{
+	width: 170px;
+	margin: 20px auto;
+}
+footer #copyright{
+	display: none;
+}
+footer #email{
+	clear: both;
+}
+footer #email p{
+	padding: 0;
+	margin: auto 2%;
+	color: #6C5CE7;
+	font-size: 40px;
+	font-weight: 700;
+}
+footer #email p a{
+	color: #6C5CE7;
+}
+footer #message-form input:focus::placeholder, footer #message-form textarea:focus::placeholder{
+	color: #6C5CE7;
+	font-weight: 700;
+}
+footer #message-form input:focus,footer #message-form textarea:focus{
+	outline: none;
+	box-sizing: border-box;
+	border: 2px solid #6C5CE7;
+}
+footer #message-form input, footer #message-form textarea{
+	width: 40%;
+	padding: 10px; /* Some padding */
+	margin: 10px calc((20% - 60px)/4); 
+	background-color: rgba(194, 194, 194, 0.24);
+	border-radius: 16px; /* Rounded borders */
+	border-width: 0;
+}
+footer #message-form input[name="vis-name"]{
+	background-image: url("../images/icon-user.svg");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+footer #message-form textarea{
+	width: 60%;
+	background-image: url("../images/icon-edit.svg");
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+footer #message-form input[name="e-mail"]{
+	background-image: url("../images/icon-mail.svg");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+footer #message-form form input[type=submit]{
+	display: inline-block;
+	width: 20%;
+	min-width: fit-content;
+	max-width: 170px;
+	background-color: #6C5CE7;
+	font-size: 125%;
+	color: #F8F8F8;
+	text-transform: uppercase;
+	/*workaround for mis aligned */
+	position: relative;
+	bottom: 28px;
+}
+@media only screen and (max-width: 770px){
+	header, main, footer{
+		padding: 0 15px;
+	}
+	header{
+		grid-template-columns: 45px 80px auto 128px;
+	}
+	header #menu{
+		height: 40px;
+	}
+	header h1{
+		font-size: 1em;
+	}
+	header button{
+		height: 40px;
+		width: 128px;
+		border-radius: 8px;
+	}
+	main > p:first-of-type{
+		max-width: calc(100vw - 30px);
+		font-size: 54px;
+	}
+	main p{
+		text-align: center;
+		font-size: 24px;
+		font-weight: 700;
+	}
+	main #down-arrow{
+		display: block;
+		margin: 8px auto;
+	}
+	main > button{
+		color: #FFFFFF;
+		background-color: #2D3436;
+		left: auto;
+		right: 50px;
+		width: 130px;
+		height: 37px;
+	}
+	footer{
+		background-image: none;
+	}
+	footer #socials ul{
+		width: 80%;
+	}
+	footer #socials li{
+		margin: 5px 6.5%;
+	}
+	#info, #email h3, #socials h3, footer #message-form{
+		display: none;
+	}
+	footer #copyright{
+		display: block;
+		text-align: center;
+	}
+	footer #email p{
+		font-size: 18px;
+		text-align: center;
+		margin: 2% 2%;
+}
